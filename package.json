@@ -1,0 +1,12 @@
+{
+  "name": "cron-sa-trigger",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/pe-suke/cron-sa-trigger.git",
+  "license": "MIT",
+  "dependencies": {
+    "@azure/arm-streamanalytics": "^1.1.1",
+    "@azure/ms-rest-azure-js": "^2.0.1",
+    "@azure/ms-rest-nodeauth": "^3.0.3"
+  }
+}
