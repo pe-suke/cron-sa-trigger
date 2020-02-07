@@ -17,7 +17,16 @@ module.exports = async function (context, startTimer) {
             const jobName = target[1];
 
             console.log("Starting " + jobName + " in " + resourceGroup);
-            client.streamingJobs.start(resourceGroup, jobName)
+            client.streamingJobs.start(
+                resourceGroup, 
+                jobName, 
+                { options: 
+                    { startJobParameters: 
+                        { outputStartMode:
+                            'LastOutputEventTime'
+                        }
+                    }
+                })
             .then((response) => {
                 console.log("Success to start " + jobName + " in " + resourceGroup);
             }).catch(error => {
